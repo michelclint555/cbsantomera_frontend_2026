@@ -1,0 +1,89 @@
+
+
+<div  *ngIf="noticias.length == 1" class="  carousel">
+
+  <p-carousel [value]="noticias"
+              [numVisible]="1"
+              [numScroll]="1"
+              [circular]="true"
+              >
+    <ng-template let-product pTemplate="item">
+      <app-noticia-view2 [noticia]="product"></app-noticia-view2>
+    </ng-template>
+  </p-carousel>
+</div>
+
+<div *ngIf="noticias.length == 2" class="w-100 m-auto">
+
+  <p-carousel [value]="noticias"
+              [numVisible]="4"
+              [numScroll]="1"
+              [circular]="true"
+              [responsiveOptions]="responsiveOptions">
+    <ng-template let-product pTemplate="item">
+      <app-noticia-view2 [noticia]="product"></app-noticia-view2>
+    </ng-template>
+  </p-carousel>
+</div>
+
+<div *ngIf="noticias.length == 3" class="w-100 m-auto">
+
+  <p-carousel [value]="noticias"
+              [numVisible]="4"
+              [numScroll]="1"
+              [circular]="true"
+              [responsiveOptions]="responsiveOptions">
+    <ng-template let-product pTemplate="item">
+      <app-una-noticia-tipo1 [noticia]="product" ></app-una-noticia-tipo1>
+    </ng-template>
+  </p-carousel>
+</div>
+
+<div *ngIf="noticias.length == 4" class="w-100 m-auto">
+
+  <p-carousel [value]="noticias"
+              [numVisible]="4"
+              [numScroll]="1"
+              [circular]="true"
+              [responsiveOptions]="responsiveOptions">
+    <ng-template let-product pTemplate="item">
+      <app-una-noticia-tipo1 [noticia]="product" ></app-una-noticia-tipo1>
+    </ng-template>
+  </p-carousel>
+</div>
+
+<div *ngIf="noticias.length > 4" class="w-100 m-auto">
+
+  <p-carousel [value]="noticias"
+              [numVisible]="4"
+              [numScroll]="1"
+              [circular]="true"
+           
+              [responsiveOptions]="responsiveOptions"  >
+    <ng-template let-product pTemplate="item">
+      <div class="carousel-item-wrapper">
+        <a class="" [routerLink]="['/Noticias', product.idNoticia]">
+          <app-una-noticia-tipo2 [noticia]="product"></app-una-noticia-tipo2>
+        </a>
+        </div>
+    </ng-template>
+  </p-carousel>
+</div>
+
+
+<!--
+
+  <div class="card text-center m-3">
+
+  <img src="{{http+product.idAlbum+'/'+product.portada}}" class="card-img-top"  alt="...">
+  <div class="card-body">
+    <h5 class="card-title">{{product.nombre}}</h5>
+    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+  <div class="card-footer text-muted">
+    2 days ago
+  </div>
+</div>
+
+-->

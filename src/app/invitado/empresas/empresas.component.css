@@ -1,0 +1,64 @@
+.sponsors {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0rem;
+  padding: 1rem;
+  justify-items: center;
+}
+
+
+.sponsor-card {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+  .sponsor-card:hover {
+    transform: scale(1.05);
+  }
+
+  .sponsor-card img {
+    max-width: 100%;
+    max-height: 60px;
+    object-fit: contain;
+
+  }
+.sponsors {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0rem;
+  padding: 1rem;
+  justify-items: center;
+}
+
+
+.sponsor-card {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+  .sponsor-card:hover {
+    transform: scale(1.05);
+  }
+
+  .sponsor-card img {
+    max-width: 100%;
+    max-height: 60px;
+    object-fit: contain;
+
+  }
+
+  .ql-editor {
+  white-space: pre-line;
+}

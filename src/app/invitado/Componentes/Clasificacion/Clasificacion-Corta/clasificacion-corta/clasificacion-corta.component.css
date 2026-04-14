@@ -1,0 +1,176 @@
+/* Estilos generales */
+  .clean-table {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: #333;
+  }
+
+    .clean-table h2 {
+      text-align: left;
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+      color: #444;
+    }
+
+    .clean-table table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: #fafafa;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    .clean-table thead th {
+      background-color: #f0f0f0;
+      color: #555;
+      text-transform: uppercase;
+      font-size: 0.9rem;
+      padding: 0.75rem 0.5rem;
+      border-bottom: 2px solid #ddd;
+      text-align: center;
+    }
+
+    .clean-table tbody td {
+      padding: 0.75rem 0.5rem;
+      border-bottom: 1px solid #eee;
+      text-align: center;
+    }
+
+    .clean-table tbody tr:nth-child(odd) {
+      background-color: #fff;
+    }
+
+    .clean-table tbody tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+
+  .team-cell {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    padding: 0.75rem 0.5rem;
+  }
+
+    .team-cell img {
+      width: 24px;
+      height: 24px;
+      object-fit: contain;
+      margin: 0 0.5rem;
+    }
+
+    .team-cell span {
+      flex: 1;
+    }
+
+  /* Hover efecto */
+  .clean-table tbody tr:hover {
+    background-color: #e6f7ff;
+  }
+
+  /* Responsive hasta ~300px */
+  @media (max-width: 1275px) {
+    /* Estilos generales */
+    .clean-table {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 1rem;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      color: #00330F;
+    }
+
+      .clean-table h2 {
+        text-align: left;
+        margin-bottom: 1rem;
+        font-size: 1.5rem;
+        color: #444;
+      }
+
+      .clean-table table {
+        width: 100%;
+
+        background-color: #fff;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      }
+
+      .clean-table thead th {
+        background-color:transparent;
+        color: #555;
+        text-transform: uppercase;
+        font-size: 0.9rem;
+        padding: 0.75rem 0.5rem;
+        text-align: center;
+      }
+
+      .clean-table tbody td {
+        padding: 0.75rem 0.5rem;
+        border-bottom: 1px solid #eee;
+        text-align: center;
+        font-size: 14px;
+      }
+
+      .clean-table tbody tr:nth-child(odd) {
+        background-color: #fff;
+      }
+
+      .clean-table tbody tr:nth-child(even) {
+        background-color: #f9f9f9;
+      }
+
+    .team-cell {
+      display: flex;
+      align-items: center;
+      text-align: left;
+      padding: 0.75rem 0.5rem;
+      font-size: 1.5rem;
+    }
+      .team-cell p {
+        align-items: center;
+        font-size: 1.5rem;
+        vertical-align: central;
+        margin-top: 15px;
+        font-weight:600;
+        margin-right: 20px;
+        
+      }
+
+      .team-cell img {
+        width: 50px;
+        height: 50px;
+        object-fit: contain;
+        margin: 0 0.5rem;
+      }
+
+      .team-cell span {
+        flex: 1;
+        font-size: 16px;
+      }
+
+    /* Hover efecto */
+    .clean-table tbody tr:hover {
+      background-color: #e6f7ff;
+    }
+  }
+
+@media (max-width: 1025px) {
+}
+
+@media (max-width: 992px) {
+}
+
+@media (max-width: 768px) {
+}
+
+@media (max-width: 640px) {
+}
+
+@media (max-width: 460px) {
+}
+
+@media (max-width: 360px) {
+}
+@media (max-width: 300px) {
+}
+
+
+   

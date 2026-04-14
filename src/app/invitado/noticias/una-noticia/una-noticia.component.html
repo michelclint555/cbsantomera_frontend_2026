@@ -1,0 +1,32 @@
+<article class=" content container mt-5 m-auto rm-web__container news-detail ng-star-inserted">
+
+
+  <div class=" nine container mt-5 ">
+
+    <h1 class="">{{noticia.titulo}}</h1>
+  </div>
+  <div class="container">
+    <h1 class="news-detail__title">  </h1>
+    <!----><!----><p class="news-detail__excerpt"></p><h3>{{noticia.subtitulo}}</h3>
+    <p></p>
+
+  </div>
+
+  <div class="image-container">
+    <img [src]="http+noticia.idNoticia+'/'+noticia.portada"  alt="Handshake between players">
+  </div>
+
+  <div class="container postcard__subtitle small ">
+    <b><span class="mr-5">{{noticia.tipoNoticia}}</span></b>
+    <i class="fas fa-calendar-alt mr-2"></i>{{ noticia.fecha | date:'d \'de\' MMMM \'de\' y':'':'es' }}
+
+  </div>
+
+  <div class="content">
+
+    <p [innerHTML]="htmlContent"><span></span></p>
+
+  </div>
+
+
+</article>

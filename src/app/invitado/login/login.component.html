@@ -1,0 +1,25 @@
+
+<section id="reg_login" class="round-3"   >
+  <div class="container">
+    <div class="user signinBx">
+      <div class="imgBx"><img  src="../assets/imagenes/C-Baloncesto-Santomera-2.png" alt="" /></div>
+      <div class="formBx">
+        <form [formGroup]="loginForm" >
+          <h2>INICIAR SESIÓN</h2>
+          <input name="Correo" formControlName="correo" type="email" placeholder="Correo" autofocus="" required />
+          <input type="password" formControlName="clave" name="Contraseña" placeholder="Contraseña" required />
+          <div class="custom-control custom-checkbox mb-3">
+
+          </div>
+
+          <p-button label="Iniciar Sesión" class="warning" (click)="onLogin()" typeof="submit" [disabled]="false" />
+          <p class="signup">
+
+
+          </p>
+        </form>
+      </div>
+    </div>
+ 
+  </div>
+</section>

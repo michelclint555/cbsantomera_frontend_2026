@@ -1,0 +1,18 @@
+
+
+<div class="me-1 ml-1 ">
+
+  <li class=" "[routerLink]="['/Inicio/Noticias/Noticias', noticia.idNoticia]">
+    <div class="card corner">
+      <h2 *ngIf="noticia.nuevo" class="etiqueta">Nuevosss</h2>
+      <div class="card_image"><img [src]="http+noticia.idNoticia+'/'+noticia.portada" class="w-100"></div>
+      <div class="card_content">
+        <h2 class="card_title align-middle" >{{noticia.titulo}}</h2>
+
+       
+      </div>
+    </div>
+  </li>
+
+</div>
+    

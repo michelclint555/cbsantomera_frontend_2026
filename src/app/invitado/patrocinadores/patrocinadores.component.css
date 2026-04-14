@@ -1,0 +1,47 @@
+.sponsors {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
+  justify-items: center;
+  align-items: center;
+}
+
+.sponsor-card {
+  background-color: white;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80px; /* altura mínima para alinear tarjetas */
+  transition: transform 0.3s ease;
+}
+
+  .sponsor-card:hover {
+    transform: scale(1.05);
+  }
+
+/* Logos de PATROCINADORES */
+.img-patrocinadores {
+  max-width: clamp(140px, 10vw, 180px);
+  max-height: auto;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+/* Logos de COLABORADORES: 40px más pequeños */
+.img-colaboradores {
+  max-width: clamp(60px, 10vw, 90px); /* 40px menos que patrocinadores */
+  max-height: auto; /* ajustado proporcionalmente */
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+  /* Hover en imágenes */
+  .img-patrocinadores:hover,
+  .img-colaboradores:hover {
+    transform: scale(1.1);
+  }

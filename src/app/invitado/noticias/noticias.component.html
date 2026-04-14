@@ -1,0 +1,134 @@
+<app-cabecera-titulo [titulo]="titulo"></app-cabecera-titulo>
+
+
+
+
+
+
+
+<section class=" container news-highlight">
+  <!-- Fecha -->
+
+  <div class="noticia" *ngFor="let item of noticias">
+    <a class="postcard__img_link" [routerLink]="['./', item.idNoticia]">
+      <div class="news-date">
+        <span class="day"></span>
+        <span class="month">
+        </span>
+      </div>
+
+      <!-- Contenido -->
+      <div class="news-main">
+        <div class="news-img-container">
+          <img [src]="http + item.idNoticia + '/' + item.portada" alt="Noticia" class="news-img" />
+        </div>
+        <div class="news-content">
+          <h2 class="news-title">{{ item.titulo }}</h2>
+          <p class="news-subtitle">{{ item.subtitulo }}</p>
+          <div class="news-meta">
+            <span class="category">{{ item.categoria }}</span>
+            <span class="date">{{ item.fecha | date:'d \'de\' MMMM \'de\' y':'':'es' }}</span>
+          </div>
+        </div>
+      </div>
+
+    </a>
+  </div>
+  
+</section>
+
+
+
+
+
+
+<!--
+
+<p-dataView #dv [value]="noticias">
+  <ng-template pTemplate="listItem" let-noticia>
+    <div class="grid grid-nogutter">
+      <div class="col-12" *ngFor="let item of noticias; let first = first" class="col-12">
+        <div class="flex flex-column sm:flex-row sm:align-items-center p-4 gap-3" [ngClass]="{ 'border-top-1 surface-border': !first }">
+          <div class="md:w-10rem relative">
+            <img class="block xl:block mx-auto border-round w-full" [src]="http+item.idNoticia+'/'+item.portada" [alt]="item.titulo" />
+
+          </div>
+          <div class="flex flex-column md:flex-row justify-content-between md:align-items-center flex-1 gap-4">
+            <div class="flex flex-row md:flex-column justify-content-between align-items-start gap-2">
+              <div>
+                <span class="font-medium text-secondary text-sm">{{ item.titulo }}</span>
+                <div class="text-lg font-medium text-900 mt-2">{{ item.titulo}}</div>
+              </div>
+              <div class="surface-100 p-1" style="border-radius: 30px">
+                <div class="surface-0 flex align-items-center gap-2 justify-content-center py-1 px-2" style="border-radius: 30px; box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.04), 0px 1px 2px 0px rgba(0, 0, 0, 0.06)">
+                  <span class="text-900 font-medium text-sm">{{ item.titulo }}</span>
+                  <i class="pi pi-star-fill text-yellow-500"></i>
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-column md:align-items-end gap-5">
+              <span class="text-xl font-semibold text-900">{{ item.titulo }}</span>
+              <div class="flex flex-row-reverse md:flex-row gap-2">
+
+                <p-button icon="pi pi-shopping-cart" class="flex-auto md:flex-initial white-space-nowrap" label="Buy Now" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+</p-dataView>
+
+
+
+<p-dataView [value]="noticias">
+  <ng-template pTemplate="header">
+    <p-dataViewLayoutOptions></p-dataViewLayoutOptions>
+  </ng-template>
+  <ng-template let-noticia pTemplate="listItem">
+    <div class="p-col-12">
+      <div class="product-list-item">
+        <img class="block xl:block mx-auto border-round w-full" [src]="http+noticia .idNoticia+'/'+noticia .portada" [alt]="noticia.titulo" />
+        <div class="product-list-detail">
+          <div class="product-name">{{ noticia.titulo}}</div>
+          <div class="product-description">{{ noticia.titulo }}</div>
+          <div class="product-name">{{ noticia.titulo }}</div>
+          <i class="pi pi-tag product-category-icon"></i><span class="product-category">{{ noticia.titulo }}</span>
+        </div>
+        <div class="product-list-action">
+          <span class="product-price">${{ noticia.titulo }}</span>
+          <span [class]="
+              'product-badge status-' + noticia.titulo.toLowerCase()
+            ">{{ noticia.titulo }}</span>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+  <ng-template let-noticia pTemplate="gridItem">
+    <div class="p-col-12 p-md-4">
+      <div class="product-grid-item card">
+        <div class="product-grid-item-top">
+          <div>
+            <i class="pi pi-tag product-category-icon"></i>
+            <span class="product-category">{{ noticia.titulo }}</span>
+          </div>
+          <span [class]="
+              'product-badge status-' + noticia.titulo.toLowerCase()
+            ">{{ noticia.titulo }}</span>
+        </div>
+        <div class="product-grid-item-content">
+          <img class="" [src]="http+noticia .idNoticia+'/'+noticia .portada" [alt]="noticia.titulo" />
+          <div class="product-name">{{ noticia.titulo }}</div>
+          <div class="product-description">{{ noticia.titulo }}</div>
+          <div class="product-name">{{ noticia.titulo }}</div>
+        </div>
+        <div class="product-grid-item-bottom">
+          <span class="product-price">${{ noticia.titulo }}</span>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+</p-dataView>
+
+  -->

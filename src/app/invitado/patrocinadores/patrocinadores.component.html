@@ -1,0 +1,38 @@
+<div class="container mt-5">
+
+  <!-- PATROCINADORES -->
+  <div *ngIf="patrocinadores.length" class="text-center mb-5">
+    <h3>PATROCINADORES</h3>
+  </div>
+
+  <section class="sponsors-section">
+    <div class="sponsors">
+      <div *ngFor="let item of patrocinadores">
+        <a [href]="item.url" target="_blank" rel="noopener noreferrer">
+          <div class="sponsor-card">
+            <img [src]="item.logo" [alt]="item.nombre" class="img-patrocinadores" />
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- COLABORADORES -->
+  <div *ngIf="colaboradores.length" class="text-center my-5">
+    <h3>COLABORADORES</h3>
+  </div>
+
+  <section class="sponsors-section">
+    <div class="sponsors">
+      <div *ngFor="let item of colaboradores">
+        <div class="sponsor-card">
+          <a *ngIf="item.url" [href]="item.url" target="_blank" rel="noopener noreferrer">
+            <img [src]="item.logo" [alt]="item.nombre" class="img-colaboradores" />
+          </a>
+          <img *ngIf="!item.url" [src]="item.logo" [alt]="item.nombre" class="img-colaboradores" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>

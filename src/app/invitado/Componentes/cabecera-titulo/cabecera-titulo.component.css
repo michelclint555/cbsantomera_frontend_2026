@@ -1,0 +1,65 @@
+.nine h1 {
+  text-align: center;
+  font-size: clamp(24px, 5vw, 50px); /* escala entre 24px y 50px */
+  text-transform: uppercase;
+  color: #222;
+  letter-spacing: 1px;
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  word-wrap: break-word; /* evita que se desborde en títulos largos */
+  overflow-wrap: break-word;
+}
+
+  .nine h1 span {
+    margin-top: 20px;
+    font-size: clamp(12px, 3vw, 15px);
+    color: #000;
+    word-spacing: 1px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-family: "Raleway", sans-serif;
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    grid-template-rows: 27px 0;
+    grid-gap: 20px;
+    align-items: center;
+  }
+
+    .nine h1 span:after,
+    .nine h1 span:before {
+      content: " ";
+      display: block;
+      border-bottom: 1px solid #ccc;
+      border-top: 1px solid #ccc;
+      height: 5px;
+      background-color: #f8f8f8;
+    }
+
+/* Banner general */
+.banner {
+  background: #f9fbfd no-repeat right center;
+  background-size: contain;
+  border-top: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 30px 20px;
+}
+
+  .banner h1 {
+    color: #0b2a5d;
+    font-weight: bold;
+    margin: 0;
+    font-size: clamp(20px, 4vw, 40px); /* se adapta de móvil a escritorio */
+  }
+
+/* Ajustes extra pequeños (menos de 320px) */
+@media (max-width: 320px) {
+  .nine h1 {
+    font-size: 20px;
+  }
+
+    .nine h1 span {
+      font-size: 10px;
+      grid-gap: 10px;
+    }
+}

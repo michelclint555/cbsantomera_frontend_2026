@@ -1,0 +1,197 @@
+/* Use Roboto for the entire body */
+body {
+  margin: 0;
+  height: 100vh;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
+}
+
+/* Floating Action Button (FAB) */
+.fab {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: #00380a;
+  color: white;
+  
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+  z-index: 100;
+}
+
+  .fab:hover {
+    bottom: 30px;
+    right: 20px;
+    background-color: #fcbc00;
+  }
+
+  .fab img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+  }
+
+/* Chat container styling */
+.chat-container {
+  position: fixed;
+  bottom: 110px;
+  right: 20px;
+  width: 400px;
+  height: 400px; /* Fixed height to prevent expanding */
+  background-color: white;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 100;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Chat header */
+.chat-header {
+  background-color: #00380a;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  font-weight: 500;
+  position: relative;
+  font-size: 1.5rem;
+}
+
+/* Close button */
+.close-chat {
+  position: absolute;
+  right: 15px;
+  top: 8px;
+  font-size:2.0rem;
+  cursor: pointer;
+}
+
+/* Chat body */
+.chat-body {
+  padding: 10px;
+  flex-grow: 1;
+  overflow-y: auto; /* Allows scrolling for long messages */
+  max-height: 350px; /* Adjusted to keep space for footer */
+}
+
+  /* Hide the scrollbar */
+  .chat-body::-webkit-scrollbar {
+    width: 0;
+  }
+
+/* Common chat message style */
+.chat-message {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  margin-bottom: 10px;
+  border-radius: 12px;
+  max-width: 80%;
+  word-wrap: break-word;
+  position: relative;
+}
+
+  /* Message bubble styling */
+  .chat-message span {
+    display: inline-block;
+    padding: 10px;
+    border-radius: 12px;
+  }
+
+  /* Bot message (aligned left) */
+  .chat-message.bot {
+    justify-content: flex-start;
+  }
+
+    .chat-message.bot span {
+      background-color: #eee;
+    }
+
+  /* User message (aligned right) */
+  .chat-message.user {
+    justify-content: flex-end;
+  }
+
+    .chat-message.user span {
+      background-color: #00380a;
+      color: white;
+    }
+
+/* Avatar styles */
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+/* Bot avatar (on the left side of message) */
+.chat-message.bot .avatar {
+  margin-right: 10px; /* Space between avatar and message */
+}
+
+/* User avatar (on the right side of message) */
+.chat-message.user .avatar {
+  margin-left: 5px; /* Reduced margin between avatar and chat window */
+  order: 1; /* Avatar appears after the message */
+}
+
+/* Chat footer (input and send button) */
+.chat-footer {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-top: 1px solid #ddd;
+  background-color: #f9f9f9;
+}
+
+  .chat-footer input {
+    flex-grow: 1;
+    border: none;
+    padding: 12px;
+    border-radius: 10px;
+    background-color: #e0e0e0;
+    outline: none;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+  }
+
+    .chat-footer input:focus {
+      background-color: #d4d4d4;
+    }
+
+  .chat-footer button {
+    padding: 10px 15px;
+    margin-left: 10px;
+    background-color: #00380a;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+  }
+
+    .chat-footer button:hover {
+      background-color: #3700b3;
+    }
+
+    .chat-footer button i {
+      font-size: 18px;
+    }

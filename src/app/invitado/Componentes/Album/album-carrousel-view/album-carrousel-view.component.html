@@ -1,0 +1,38 @@
+<!-- <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button *ngFor="let obj of data; let i = index" type="button" data-bs-target="#carouselExampleCaptions" [attr.data-bs-slide-to]="i" aria-current="true" aria-label="..." [ngClass]="{'active': i == 0}">
+    </button>
+  </div>
+  <div class="carousel-inner">
+    <div *ngFor="let foto of data; let i = index" class="carousel-item" [ngClass]="{'active': i == 0}">
+     <app-album-view [album]="foto"></app-album-view>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+-->
+<div class="w-100 m-auto">
+
+  <p-carousel [value]="albumes "
+              [numVisible]="4"
+              [numScroll]="1"
+              [circular]="true"
+              [responsiveOptions]="responsiveOptions">
+    <ng-template let-product pTemplate="item">
+      <div class="m-auto p-4">
+        <app-album-view [album]="product"></app-album-view>
+      </div>
+      
+
+    </ng-template>
+  </p-carousel>
+</div>
+
+

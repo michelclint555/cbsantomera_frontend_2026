@@ -1,0 +1,78 @@
+<app-cabecera-titulo [titulo]="titulo"></app-cabecera-titulo>
+<!--
+
+<div class=" flex flex-wrap  container gap-5  mt-8 mb-8 align-items-stretch">
+  <div *ngFor="let equipo of equipos | slice:1; index as i; first as isFirst" class="m-auto gap-1 flex align-items-center justify-content-center  font-bold border-round m-2">
+    <p-card class="justify-content-center align-items-center justify-content-center ">
+      <ng-template pTemplate="header" class="m-0 text-bold pt-5">
+        <div class="div1 w-100 m-auto  justify-content-center ">
+
+          <a [routerLink]="['./Equipo', equipo.idEquipo]" class="hover-switch">
+            <img src="assets/images/3.jpg" class="img-fluid  div1 " alt="imagen">
+            <img src="assets/images/8.jpg" class="img-fluid   div2" alt="imagen">
+          </a>
+
+        </div>
+      </ng-template>
+
+      <h5><span class="vertical-align-middle nine">{{equipo.idEquipo}}</span></h5>
+
+
+
+
+    </p-card>
+  </div>
+
+</div>
+
+
+<div class=" flex flex-wrap  container  gap-5  mt-8 mb-8 align-items-stretch ">
+  <div *ngFor="let equipo of equipos" class="m-auto gap-1 flex align-items-center justify-content-center  font-bold border-round m-2">
+    <div class="second hero  zoom-on-hover" [routerLink]="['./Equipo', equipo.idEquipo]">
+
+      <img src="assets/images/3.jpg" class="img-fluid hero-profile-img div1 " alt="imagen">
+      <img src="assets/images/8.jpg" class="img-fluid hero-profile-img  div2" alt="imagen">
+      <div class="hero-description-bk"></div>
+      <div class="hero-logo justify-content-center">
+        <img class="pl-1 pt-2" src="../../../assets/imagenes/C-Baloncesto-Santomera-2.png" alt="">
+      </div>
+      <div class="hero-description">
+        <p>{{equipo.nombre+"fasd"}}</p>
+      </div>
+      <div class="hero-date">
+
+      </div>
+
+    </div>
+
+
+
+
+
+  </div>
+
+</div>
+
+-->
+<div class="container">
+
+  <div class="second hero  zoom-on-hover" *ngFor="let equipo of equipos">
+    <a class="" [routerLink]="['/Cantera', equipo.idEquipo]">
+      <img class="hero-profile-img" src={{equipo.foto}} alt="">
+      <div class="hero-description-bk"></div>
+      <div class="hero-logo justify-content-center">
+        <img class="pl-1 pt-2" src="../../../assets/imagenes/C-Baloncesto-Santomera-2.png" alt="">
+      </div>
+      <div class="hero-description">
+        <p>{{equipo.nombre}}</p>
+      </div>
+      <div class="hero-date">
+        <p>{{equipo.categoria.nombre + ' '+equipo.categoria.sexo }}</p>
+      </div>
+    </a>
+  </div>
+</div>
+
+
+
+

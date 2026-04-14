@@ -1,0 +1,28 @@
+<p-toast [showTransformOptions]="'translateY(100%)'"
+         [showTransitionOptions]="'500ms'"
+         [hideTransitionOptions]="'1000ms'"
+         [showTransformOptions]="'translateX(100%)'" />
+<div class="login-page">
+  <div class="form">
+    <form [formGroup]="formulario" class="login-form " (ngSubmit)=" activeCount()">
+      <h3>Cambiar Contraseña</h3>
+
+
+      <input type="password" placeholder="Contraseña Actual" id="user" formControlName="password1" autocomplete="off" />
+      <small *ngIf="claveActual" class="text-danger">La contraseña actual es un campo requerido</small>
+      <input type="password" placeholder="Nueva Contraseña" id="user" formControlName="password2" autocomplete="off" />
+      <small *ngIf="clave2" class="text-danger">La nueva contraseña es un campo requerido</small>
+      <input type="password" placeholder="Confirmar Contraseña" formControlName="password3" id="pass" autocomplete="off" />
+      <small *ngIf="clave3" class="text-danger">La confirmación de la contraseña es un campo requerido</small>
+      <i data-feather="circle"></i>
+
+
+
+
+
+      <button type="submit">Guardar</button>
+
+    </form>
+  </div>
+</div>
+

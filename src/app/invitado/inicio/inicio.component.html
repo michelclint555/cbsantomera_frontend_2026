@@ -1,0 +1,48 @@
+
+
+
+
+
+<body class="grid-container ">
+
+  <header class="header h-auto">
+
+    <app-nav-menu></app-nav-menu>
+
+  </header>
+
+
+
+  <div class="">
+    <div class="c1 ">
+     <!--  <app-chatbot></app-chatbot>-->
+
+      <router-outlet></router-outlet>
+
+    </div>
+
+    <div class="c2 p-5">
+      <app-patrocinadores></app-patrocinadores>
+    </div>
+
+  </div>
+  <footer class="footer h-auto">
+
+    <app-footer></app-footer>
+
+  </footer>
+</body>
+
+
+<!--
+
+<p-galleria [value]="images" [showItemNavigators]="true" [autoPlay]="true" [circular]="true" [transitionInterval]="3000" [showThumbnails]="false" [showIndicators]="true" [containerStyle]="{   }" [responsiveOptions]="responsiveOptions">
+  <ng-template pTemplate="item" let-item>
+    <img [src]="item.itemImageSrc" style="width: 100%; display: block;" />
+  </ng-template>
+
+</p-galleria>
+
+
+<img src="/ClientApp/src/assets/img/3.jpg" style="width: 100%" />
+  -->

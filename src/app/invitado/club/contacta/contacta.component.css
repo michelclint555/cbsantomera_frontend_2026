@@ -1,0 +1,27 @@
+.contact-info {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 1rem;
+  margin: auto;
+  max-width: 500px;
+  text-align: left;
+}
+
+  .contact-info p {
+    margin: 0.5rem 0;
+   
+  }
+
+.content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+  .content h2 {
+    color: #002244;
+    font-size: 1.5rem;
+    border-bottom: 2px solid #002244;
+    padding-bottom: 0.3rem;
+  }

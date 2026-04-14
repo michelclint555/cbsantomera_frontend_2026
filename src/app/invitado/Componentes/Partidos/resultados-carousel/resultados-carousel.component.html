@@ -1,0 +1,16 @@
+<p-carousel [value]="data"
+            [numVisible]="1"
+            [numScroll]="1"
+            [circular]="true"
+            autoplayInterval="3000"
+            [responsiveOptions]="responsiveOptions">
+  <ng-template let-product pTemplate="item">
+    <div class="contenedor  ">
+      <app-resultado-view></app-resultado-view>
+    </div>
+    
+
+  </ng-template>
+</p-carousel>
+
+

@@ -1,0 +1,93 @@
+<!--
+<div class="sidebar" [class.open]="isOpen">
+
+
+  <p-panelmenu [model]="items" styleClass="w-full md:w-100">
+    <ng-template #item let-item>
+      <ng-container *ngIf="item.route; else urlRef">
+        <a [routerLink]="item.route" class="flex align-items-center
+                    cursor-pointer text-color px-3 py-2">
+          <span [class]="item.icon"></span>
+          <span class="ml-2">{{ item.label }}</span>
+        </a>
+      </ng-container>
+      <ng-template #urlRef>
+        <a pRipple *ngIf="item.url; else noLink" [href]="item.url" lass="flex items-center cursor-pointer p-4 rounded-border text-surface-700 dark:text-surface-100 hover:bg-surface-100 dark:hover:bg-surface-700 duration-150 transition-colors p-ripple">
+          <span [class]="item.icon"></span>
+          <span class="ml-2">{{ item.label }}</span>
+        </a>
+        <ng-template #noLink>
+          <span class="flex items-center cursor-pointer text-surface-700 dark:text-surface-0 px-4 py-2">
+            <span [class]="item.icon"></span>
+            <span class="ml-2">{{ item.label }}</span>
+            <i *ngIf="item.items" class="pi pi-angle-down text-primary ml-auto"></i>
+          </span>
+        </ng-template>
+      </ng-template>
+    </ng-template>
+  </p-panelmenu>
+</div>
+-->
+
+<p-drawer header=""
+          [transitionOptions]="'500ms'"
+          [closable]="false"
+          position="left"
+          [(visible)]="isOpen"
+          (visibleChange)="isOpenChange.emit($event)"
+          styleClass="custom-left-drawer">
+
+  <div class="sidebar" [class.open]="isOpen" style="height: 100%; display: flex; flex-direction: column;">
+
+    <!-- CONTENEDOR SCROLLABLE -->
+    <div style="flex: 1; overflow-y: auto;">
+      <p-panelmenu [model]="items" styleClass="w-full md:w-100">
+        <ng-template #item let-item>
+          <ng-container *ngIf="item.route; else urlRef">
+            <a [routerLink]="item.route" class="flex align-items-center
+                      cursor-pointer text-color px-3 py-2" (click)="closeDrawer()">
+              <span [class]="item.icon"></span>
+              <span class="ml-2">{{ item.label }}</span>
+            </a>
+          </ng-container>
+          <ng-template #urlRef>
+            <a pRipple *ngIf="item.url; else noLink" [href]="item.url" class="flex items-center cursor-pointer p-4 rounded-border text-surface-700 dark:text-surface-100 hover:bg-surface-100 dark:hover:bg-surface-700 duration-150 transition-colors p-ripple">
+              <span [class]="item.icon"></span>
+              <span class="ml-2">{{ item.label }}</span>
+            </a>
+            <ng-template #noLink>
+              <span class="flex items-center cursor-pointer text-surface-700 dark:text-surface-0 px-4 py-2">
+                <span [class]="item.icon"></span>
+                <span class="ml-2">{{ item.label }}</span>
+                <i *ngIf="item.items" class="pi pi-angle-down text-primary ml-auto"></i>
+              </span>
+            </ng-template>
+          </ng-template>
+        </ng-template>
+      </p-panelmenu>
+    </div>
+    <!-- FIN CONTENEDOR SCROLLABLE -->
+
+  </div>
+</p-drawer>
+
+
+
+
+<!--
+<div class="card flex justify-center">
+  <p-drawer header="Drawer"
+            position="bottom"
+            [(visible)]="isOpen"
+            [(style)]="height: 80%"
+            styleClass="!w-full md:!w-80 lg:!w-[30rem]">
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat.
+    </p>
+  </p-drawer>
+  <p-button (click)="isOpen = true" icon="pi pi-arrow-right" />
+</div>
+  Sidebar -->

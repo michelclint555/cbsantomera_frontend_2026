@@ -1,0 +1,41 @@
+.carousel-item-wrapper {
+  padding-right: 1rem; /* espacio entre cada noticia */
+  box-sizing: border-box;
+}
+
+/* Opcional: eliminar padding derecho en el último item para evitar scroll extra */
+p-carousel ::ng-deep .p-carousel-item:last-child .carousel-item-wrapper {
+  padding-right: 0;
+}
+/* Estilo base para escritorio */
+h3 {
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 1.2;
+  margin: 0.2rem 0;
+}
+/* Tablets y móviles medianos */
+@media (max-width: 768px) {
+  h3 {
+    font-size: 0.95rem;
+  }
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .carousel-item-wrapper {
+    padding-right: 0.5rem;
+  }
+  h3 {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 280px) {
+  .carousel-item-wrapper {
+    padding-right: 0;
+  }
+  h3 {
+    font-size: 0.8rem;
+  }
+}

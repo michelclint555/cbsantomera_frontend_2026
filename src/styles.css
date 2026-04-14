@@ -1,1 +1,72 @@
-/* You can add global styles to this file, and also import other style files */
+@import "primeicons/primeicons.css";
+.custom-left-drawer.p-drawer.p-drawer-left {
+  top: 129.5px !important; /* altura del menú (ajusta el valor) */
+  height: calc(100vh - 130px) !important; /* ocupa desde debajo del menú hasta el final */
+  width: 350px !important; /* ancho fijo */
+
+  border-top: 2px solid #6366f1; /* Indigo-500 */
+  box-shadow: 0 0 20px rgba(0,0,0,0.1); /* sombra suave */
+
+  border-right: 1px solid #e0e0e0;
+  overflow-y: auto; /* scroll si hay muchos items */
+  background: #fff;
+}
+header {
+  width: 100%;
+  background-color: #fcbc00;
+  padding: 5px;
+  position: sticky;
+  right: 0;
+  top: 0;
+  z-index: 10;
+}
+
+
+
+@media (max-width: 992px) {
+  .custom-left-drawer.p-drawer.p-drawer-left {
+    top: 98px !important; /* altura del menú (ajusta el valor) */
+    height: calc(100vh - 230px) !important; /* ocupa desde debajo del menú hasta el final */
+    width: 350px !important; /* ancho fijo */
+
+  }
+}
+
+
+
+
+
+  /* Tablet */
+  @media (max-width: 768px) {
+    .custom-left-drawer.p-drawer.p-drawer-left {
+      top: 82px !important; /* altura del menú (ajusta el valor) */
+      height: calc(100vh - 230px) !important; /* ocupa desde debajo del menú hasta el final */
+      width: 260px !important;
+    }
+  }
+
+  /* Móvil */
+  @media (max-width: 480px) {
+    .custom-left-drawer.p-drawer.p-drawer-left {
+      width: 100% !important; /* ocupa toda la pantalla */
+    }
+  }
+
+  /* Extra pequeño (hasta 300px) */
+  @media (max-width: 300px) {
+    .custom-left-drawer.p-drawer.p-drawer-left {
+      width: 100% !important; /* ocupa 100% del ancho */
+      padding: 0.5rem; /* menos padding */
+    }
+
+    /* Ajustes para texto e iconos */
+    .custom-left-drawer a,
+    .custom-left-drawer span {
+      font-size: 0.85rem;
+    }
+
+    .custom-left-drawer .pi {
+      font-size: 1rem;
+    }
+  }
+

@@ -1,0 +1,111 @@
+:root {
+  --rm-animation-fill-mode: both;
+  --rm-animation-delay-ms: .15s;
+  --rm-animation-delay-s: 1s;
+  --rm-animation-duration-ms: .15s;
+  --rm-animation-duration-s: 1s;
+  --rm-transition-duration-ms: .4s;
+  --rm-transition-duration-s: 1s;
+}
+
+.news-detail__title {
+  color: var(--rm-color-grayscale-title)
+}
+
+
+.nine {
+  text-transform: uppercase;
+  color: #222;
+  letter-spacing: 1px;
+  font-family: "Playfair Display", serif;
+  font-weight: bold;
+}
+
+.imagen {
+  border-radius: 20px;
+  width: 100%;
+  height: auto;
+}
+
+.nine h1 span {
+  margin-top: 25px;
+  font-size: 15px;
+  color: #0000;
+  word-spacing: 1px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  display: grid;
+  grid-template-columns: 1fr max-content 1fr;
+  grid-template-rows: 27px 0;
+  grid-gap: 20px;
+  align-items: center;
+}
+
+  .nine h1 span:after, .nine h1 span:before {
+    content: " ";
+    display: block;
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    height: 5px;
+    background-color: #f8f8f8;
+  }
+
+.ng-star-inserted {
+  color: #43526E;
+  font-size: 20px;
+  text-align: left;
+  font-family: Arial,Arial, Helvetica, sans-serif
+}
+
+
+.news-detail__img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity calc(var(--rm-animation-delay-ms) * 2) ease-in-out,transform calc(var(--rm-animation-delay-ms) * 8) ease-in-out;
+}
+
+
+.wrapper {
+  width: 75vw;
+  max-width: 1000px;
+  min-width: 250px;
+  margin: auto;
+}
+
+
+
+img {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0px 3px 5px rgba(15, 15, 15, 5 );
+}
+
+p {
+  /*width: min-content;*/
+  font-size: 18px;
+  /*word-wrap: normal;*/
+  overflow: visible;
+  /*overflow-wrap: break-word;*/
+  /*word-break:break-all;*/
+  hyphens: auto;
+}
+
+.banner {
+  background: #f9fbfd /*url('background-pattern.png')*/ no-repeat right center;
+  background-size: contain;
+  border-top: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 40px 60px;
+}
+
+  .banner h1 {
+    color: #0b2a5d;
+    font-size: 40px;
+    font-weight: bold;
+    margin: 0;
+  }

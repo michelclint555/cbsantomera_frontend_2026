@@ -1,0 +1,59 @@
+<!--
+<div class="container">
+  <div class="row">
+    <div class="col s12 center-align">
+      <h1 class="titulo">DIA DEL BENJAMIN 2023</h1>
+    </div>
+  </div>
+
+
+    <div class="flex flex-wrap column-gap-4 row-gap-6" *ngFor="let item of images; let index = index " key="index" style="cursor: pointer" (click)="imageClick(index)">
+      <div class="font-bold flex align-items-center justify-content-center">
+        <figure>
+          <img src={{item.itemImageSrc}} alt="photo" class="shake">
+
+
+
+        </figure>
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+  -->
+<app-cabecera-titulo [titulo]="titulo"></app-cabecera-titulo>
+
+<div class="contedor" >
+  <p-galleria [value]="this.album.fotosAlbum" [(visible)]="displayBasic"
+              [responsiveOptions]="responsiveOptions"
+              [(activeIndex)]="activeIndex"
+              [containerStyle]="{ 'max-width': '840px' }"
+              [numVisible]="7"
+              [circular]="true"
+              [fullScreen]="true"
+              [showItemNavigators]="true"
+              [showThumbnails]="false">
+
+
+    <ng-template pTemplate="item" let-item>
+      <img class="imgView" src="{{http+'temporada 24-25'+'/'+modelo+'/'+album.idAlbum+'/'+item.imagen}}" onchange="openImage(index)" style="width: 100%; max-height:720px;" />
+    </ng-template>
+    
+  </p-galleria>
+</div>
+
+
+
+
+
+<div id="gallery" class="container-fluid">
+  <div class="flex flex-wrap column-gap-4 row-gap-6 foto" *ngFor="let item of this.album?.fotosAlbum; let index = index " key="index" style="cursor: pointer" (click)="imageClick(index)">
+    <img src="{{http+'temporada 24-25'+'/'+modelo+'/'+album.idAlbum+'/'+item.thumbnailImageSrc}}" class=" img-responsive">
+
+
+  </div>
+
+  </div>

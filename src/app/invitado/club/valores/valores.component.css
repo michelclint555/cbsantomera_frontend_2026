@@ -1,0 +1,101 @@
+@import url(https://fonts.googleapis.com/css?family=Dancing+Script);
+.nine h1 {
+  text-align: center;
+  font-size: 50px;
+  text-transform: uppercase;
+  color: #222;
+  letter-spacing: 1px;
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+}
+
+  .nine h1 span {
+    margin-top: 25px;
+    font-size: 15px;
+    color: #0000;
+    word-spacing: 1px;
+    font-weight: normal;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-family: "Raleway", sans-serif;
+    font-weight: 500;
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    grid-template-rows: 27px 0;
+    grid-gap: 20px;
+    align-items: center;
+  }
+
+    .nine h1 span:after, .nine h1 span:before {
+      content: " ";
+      display: block;
+      border-bottom: 1px solid #ccc;
+      border-top: 1px solid #ccc;
+      height: 5px;
+      background-color: #f8f8f8;
+    }
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+header {
+  background-color: #002244;
+  color: white;
+  padding: 2rem;
+  text-align: center;
+}
+
+  header h1 {
+    margin: 0;
+    font-size: 2rem;
+  }
+
+  header p {
+    margin: 0.5rem 0 0;
+    font-size: 1rem;
+  }
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
+}
+
+  .image-container img {
+    max-width: 90%;
+    height: auto;
+    border-radius: 10px;
+  }
+
+.content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+
+  .content h2 {
+    color: #002244;
+    font-size: 1.5rem;
+    border-bottom: 2px solid #002244;
+    padding-bottom: 0.3rem;
+  }
+
+  .content h3 {
+    color: #002244;
+    font-size: 1.5rem;
+    border-bottom: 2px solid #002244;
+    padding-bottom: 0.3rem;
+    text-align: left;
+    font-weight: 500;
+  }
+
+  .content p {
+    line-height: 1.6;
+    text-align: left;
+    margin-bottom: 2rem;
+  }

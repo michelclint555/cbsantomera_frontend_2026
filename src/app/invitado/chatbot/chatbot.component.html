@@ -1,0 +1,35 @@
+
+
+    <!-- Floating Action Button with chatbot icon -->
+    <button class="fab" onclick="toggleChat()">
+      <img src="assets/imagenes/limoncito_alegre.png"
+           alt="bot-avatar"
+           class="avatar"
+           width="80"/>
+    </button>
+
+    <!-- Chat Screen -->
+    <div id="chat-screen" class="chat-container hidden">
+      <div class="chat-header">
+        Chatbot
+        <i class="fas fa-times close-chat" onclick="toggleChat()"></i>
+      </div>
+      <div class="chat-body">
+        <div class="chat-message bot">
+        <img
+            src="assets/imagenes/limoncito_alegre.png"
+            alt="bot-avatar"
+            class="avatar"
+          />
+          <span>!Hola¡ Soy limoncito, ¿En qué puedo ayudarte? </span>
+        </div>
+      </div>
+      <div class="chat-footer">
+        <input type="text" placeholder="Escribe tu mensaje..." id="userInput" />
+        <button id="sendBtn">Enviar</button>
+      </div>
+    </div>
+
+  
+
+

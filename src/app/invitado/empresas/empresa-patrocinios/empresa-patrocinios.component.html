@@ -1,0 +1,33 @@
+
+<app-cabecera-titulo [titulo]="noticia.titulo"></app-cabecera-titulo>
+<article class=" wrapper mt-5 container m-auto rm-web__container news-detail ng-star-inserted">
+
+
+
+
+
+
+  <div>
+    <img rmadobeimage="" onload="this.style.opacity = 1" class="news-detail__img" [src]="http+noticia.idNoticia+'/'+noticia.portada" class="w-100" loading="lazy" fetchpriority="auto" style="opacity: 1;">
+    <!--<img rmadobeimage="" onload="this.style.opacity = 1" class="news-detail__img " alt="Real Madrid-Real Sociedad: a por el pase a la final de la Copa del Rey"  [src]="http+noticia.idNoticia+'/'+noticia.portada" loading="lazy" fetchpriority="auto">-->
+  </div>
+
+  <div class="postcard__subtitle small mt-5">
+
+
+
+  </div>
+  <div class="news-detail__container">
+    <div>
+      <main class="news-detail__main">
+        <div class="ng-star-inserted">
+
+          <p class="news-detail__main--text ng-star-inserted"><span></span></p> <div class="ql-editor" [innerHTML]="htmlContent">
+          </div>
+
+          <p></p><!----><!----><!---->
+        </div><div class="ng-star-inserted"><!----><!----><!----><!----><!----><!----><!----></div><!---->
+      </main><!----><!----><!----><!----><!---->
+    </div>
+  </div><!---->
+</article>

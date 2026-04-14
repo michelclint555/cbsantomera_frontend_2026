@@ -1,0 +1,157 @@
+/* === CONTENEDOR === */
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  /* cada card ocupa mínimo 280px, máximo 1fr */
+  gap: 1rem;
+  padding: 1rem;
+  justify-items: center; /* centra las cards */
+}
+
+/* === CARD DESIGN === */
+.hero {
+  position: relative;
+  width: 100%;
+  max-width: 350px; /* límite en escritorio */
+  aspect-ratio: 1/1; /* cuadrado siempre */
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.3);
+  transition: transform 0.4s ease-in-out;
+}
+
+  .hero:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+  }
+
+.hero-profile-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Fondo degradado */
+.hero-description-bk {
+  background-image: linear-gradient(0deg, #3f5efb, #fc466b);
+  border-radius: 20px;
+  position: absolute;
+  top: 55%;
+  left: -5px;
+  height: 65%;
+  width: 110%;
+  transform: skew(19deg, -9deg);
+}
+
+
+.second .hero-description-bk {
+  background-image: linear-gradient(-20deg, #bb7413, #e7d25c);
+}
+
+/* Logo */
+.hero-logo {
+  position: absolute;
+  bottom: 35%;
+  left: 5px;
+  width: 65px;
+  height: 65px;
+  border-radius: 15px;
+  background: #fff;
+  overflow: hidden;
+  box-shadow: 4px 4px 15px rgba(0,0,0,0.4);
+}
+
+  .hero-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+/* Texto */
+.hero-description {
+  position: absolute;
+  color: #fff;
+  font-weight: 900;
+  left: 100px;
+  bottom: 10%;
+  font-size: 1rem;
+}
+
+  .hero-description p {
+    max-width: 200px; /* evita que se salga del contenedor */
+    white-space: normal; /* permite saltos */
+    word-wrap: break-word;
+    text-align: left; /* o center si prefieres */
+  }
+
+.hero-date {
+  position: absolute;
+  color: #fff;
+  left: 15px;
+  bottom: 0%;
+  font-size: 0.85rem;
+}
+
+/* === RESPONSIVE === */
+
+/* Tablets (2 por fila) */
+@media (max-width: 768px) {
+  .hero {
+    max-width: 320px;
+  }
+
+  .hero-description {
+    left: 80px;
+    font-size: 0.95rem;
+  }
+
+  .hero-date {
+    font-size: 0.8rem;
+  }
+}
+
+/* Móviles (1 por fila, hasta 300px) */
+@media (max-width: 480px) {
+  .container {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+
+  .hero {
+    max-width: 100%;
+  }
+
+  .hero-logo {
+    width: 55px;
+    height: 55px;
+  }
+
+  .hero-description {
+    left: 70px;
+    font-size: 0.9rem;
+  }
+
+  .hero-date {
+    font-size: 0.75rem;
+  }
+}
+
+/* Extra pequeño (300px o menos) */
+@media (max-width: 300px) {
+  .container {
+    grid-template-columns: 1fr; /* solo 1 card */
+  }
+
+  .hero {
+    aspect-ratio: auto;
+    height: 220px; /* evita que se rompa */
+  }
+
+  .hero-description {
+    left: 60px;
+    font-size: 0.8rem;
+  }
+
+  .hero-date {
+    font-size: 0.7rem;
+  }
+}

@@ -1,0 +1,61 @@
+<!--<div class="polaroid mt-5 mb-5">
+  <img src="{{album.portada}}">
+  <div class="caption">{{album.nombre}}</div>
+</div>
+  -->
+
+
+
+<div id="polaroid">
+  <a class="" [routerLink]="['/Galeria', album.idAlbum]">
+    <div id="image-bg">
+
+      <img src="{{album.portada}}">
+
+      <div class="titulo">
+
+
+        <div class="caption">{{album.nombre}}</div>
+
+      </div>
+
+    </div>
+
+  </a>
+
+</div>
+
+<!--
+  <div class="wrapper group  ">
+
+<section id="content">
+
+  <ul class="grid half-width group">
+
+
+    <li class="zoom-on-hover">
+
+
+<a [routerLink]="['/Multimedia', album.idAlbum]">
+  <div class="image">
+
+    <img src="{{http+album.idAlbum+'/'+album.portada}}" class="w-100">
+    <div class="caption">
+      <h2>{{album.nombre + album.idAlbum}}</h2>
+    </div>
+  </div>
+</a>
+      </li>
+
+
+
+
+
+
+
+    </ul>
+
+  </section>
+
+</div>
+  -->

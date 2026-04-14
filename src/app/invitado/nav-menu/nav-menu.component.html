@@ -1,0 +1,307 @@
+<!--
+<nav class="navbar navbar-expand-sm w-100 block navbar-toggleable-sm navbar-light  box-shadow ">
+  <div class="grid nested-grid  w-100 big-menu">
+    <div class="col-2 ">
+
+
+
+
+      <div class="mini-menu1">
+
+
+
+
+        <div class=" flex flex-row flex-wrap " id="">
+          <div class="flex m-5">
+
+            <div class="menuToggle">
+
+              <input type="checkbox" (click)="toggle()" value="isExpanded" />
+
+
+
+
+
+              <span></span>
+              <span></span>
+              <span></span>
+
+              <ul id="menu">
+              </ul>
+            </div>
+          </div>
+          <div class="flex  m-2">
+
+            <p-image src="../assets/imagenes/C-Baloncesto-Santomera-2.png" alt="Image" width="100"></p-image>
+          </div>
+
+        </div>
+      </div>
+
+
+
+
+
+
+    </div>
+    <div class="col-8">
+      <div class="grid">
+        <div class="col-12">
+          <div class="text-center  border-round-sm  font-bold">
+            <div class="  flex justify-content-between flex-wrap W-100 ">
+              <div class="flex align-items-center justify-content-center   font-bold border-round w-100"><a class="navbar-brand titulo " [routerLink]="['/']"><h1 class="font-bold">CLUB BALONCESTO SANTOMERA</h1></a></div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 pe-5">
+          <div class="text-center p-3  border-round-sm  font-bold">
+            <div class=" container cp-3 flex align-items-center justify-content-center   ">
+              <ul class="navbar-nav flex-grow">
+                <li class="nav-item pe-5 "
+                    [routerLinkActive]="['link-active']"
+                    [routerLinkActiveOptions]="{ exact: true }">
+                  <a class="nav-link text-light" [routerLink]="['/Inicio']">INICIO</a>
+                </li>
+                <li class="nav-item me-5" [routerLinkActive]="['link-active']">
+                  <a class="nav-link text-light" [routerLink]="['/Club/Portada']">CLUB</a>
+                </li>
+
+
+                <li class="nav-item me-5" [routerLinkActive]="['link-active']">
+                  <a class="nav-link text-light " [routerLink]="['/Equipo']">EQUIPO</a>
+                </li>
+
+                <li class="nav-item me-5" [routerLinkActive]="['link-active']">
+                  <a class="nav-link text-light " [routerLink]="['/Tienda']">TIENDA</a>
+                </li>
+                <li class="nav-item me-5" [routerLinkActive]="['link-active']">
+                  <a class="nav-link text-light" [routerLink]="['/Empresas']">EMPRESAS</a>
+                </li>
+                <li class="nav-item me-5" [routerLinkActive]="['link-active']">
+                  <a class="nav-link text-light" [routerLink]="['/Unete']">ÚNETE</a>
+                </li>
+
+
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-2 ">
+      <div class="text-center  border-round-sm   font-bold">
+        <div class="flex align-items-center justify-content-center   font-bold border-round ">
+          <div class="flex align-items-center justify-content-center w-4rem  font-bold border-round ">
+            <p-image src="assets/imagenes/instagram_icon.png" alt="Image" width="60"></p-image>
+          </div>
+          <div class="flex align-items-center justify-content-center w-4rem  font-bold border-round ">
+            <p-image src="assets/imagenes/twitter_icon.png" alt="Image" width="60"></p-image>
+          </div>
+          <div class="flex align-items-center justify-content-center w-4rem  font-bold border-round ">
+            <p-image src="assets/imagenes/youtube_icon.png" alt="Image" width="60"></p-image>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!--
+    <div class="dropdown_menu" [ngClass]="(isExpanded==true) ? 'd-none': 'd-block'">
+      <ul class="sub">
+        <li [routerLinkActive]="['link-active']"
+            [routerLinkActiveOptions]="{ exact: true }">
+          <a class="text-light" [routerLink]="['/']">INICIO</a>
+        </li>
+        <li [routerLinkActive]="['link-active']">
+          <a class=" text-light" [routerLink]="['/Club']">CLUB</a>
+        </li>
+        <li [routerLinkActive]="['link-active']">
+          <a class="nav-link text-light " [routerLink]="['/Noticias']">NOTICIAS</a>
+        </li>
+
+        <li [routerLinkActive]="['link-active']">
+          <a class="nav-link text-light " [routerLink]="['/Equipo']">EQUIPO</a>
+        </li>
+        <li [routerLinkActive]="['link-active']">
+          <a class="nav-link text-light" [routerLink]="['/Cantera']">CANTERA</a>
+        </li>
+        <li [routerLinkActive]="['link-active']">
+          <a class="nav-link text-light" [routerLink]="['/Multimedia']">MULTIMEDIA</a>
+        </li>
+      </ul>
+
+    </div>
+
+    <p-button class="toggle_btn round m-4" (click)="toggle()">
+      <i class="pi " style="font-size: 1.2rem"  [ngClass]="(isExpanded==true)?'pi-bars': 'pi-times'"></i>
+    </p-button>
+
+
+
+
+<div class="mini-menu">
+
+
+
+
+  <div class=" flex flex-row flex-wrap " id="">
+    <div class="flex m-5">
+
+      <div class="menuToggle">
+
+        <input type="checkbox" (click)="toggle()" value="isExpanded" />
+
+
+
+
+
+        <span></span>
+        <span></span>
+        <span></span>
+
+
+        <ul class="menu">
+        </ul>
+      </div>
+    </div>
+    <div class="flex  m-2">
+
+      <p-image src="../assets/imagenes/C-Baloncesto-Santomera-2.png" alt="Image" width="100"></p-image>
+    </div>
+
+  </div>
+</div>
+
+
+</nav>
+
+<app-aside [isOpen]="isExpanded"></app-aside>
+
+
+
+-->
+
+
+
+
+<header>
+
+  <div class="nav ">
+    <div class="navbar-left">
+      <div class="three col "(click)="toggleClass()">
+        <div class="hamburger" [class.is-active]="visible" id="hamburger-6">
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
+        </div>
+      </div>
+      <div class="logo">
+        <img src="../assets/imagenes/C-Baloncesto-Santomera-2.png" alt="Image"/>
+
+      </div>
+
+    </div>
+
+    <div class="navbar-center">
+      <!--<div class="titulo">
+      <h1 class="font-bold">CLUB BALONCESTO SANTOMERA</h1>
+    </div>
+    -->
+      <nav class="nav-links">
+        <ul class="navbar-nav flex-grow">
+          <li class="nav-item "
+              [routerLinkActive]="['link-active']"
+              [routerLinkActiveOptions]="{ exact: true }">
+            <a class="nav-link " [routerLink]="['/Inicio']">INICIO</a>
+          </li>
+          <li class="nav-item " [routerLinkActive]="['link-active']">
+            <a class="nav-link " [routerLink]="['/Club/Portada']">CLUB</a>
+          </li>
+
+
+          <li class="nav-item" [routerLinkActive]="['link-active']">
+            <a class="nav-link  " [routerLink]="['/Equipo']">EQUIPO</a>
+          </li>
+
+          <li class="nav-item" [routerLinkActive]="['link-active']">
+            <a class="nav-link  " [routerLink]="['/Tienda']">TIENDA</a>
+          </li>
+          <li class="nav-item " [routerLinkActive]="['link-active']">
+            <a class="nav-link" [routerLink]="['/Empresas']">EMPRESAS</a>
+          </li>
+         <!-- <li class="nav-item" [routerLinkActive]="['link-active']">
+            <a class="nav-link " [routerLink]="['/Unete']">ÚNETE</a>
+          </li>
+-->
+
+        </ul>
+      </nav>
+
+    </div>
+
+    <div class="right">
+      <div class="navbar-right">
+        <div class="social div1">
+          <p-image src="assets/imagenes/instagram_icon.png" alt="Image" width="60"></p-image>
+          <p-image src="assets/imagenes/twitter_icon.png" alt="Image" width="60"></p-image>
+          <p-image src="assets/imagenes/youtube_icon.png" alt="Image" width="60"></p-image>
+        </div>
+        <div class="social div2">
+
+        </div>
+        <div class="social div3">
+
+        </div>
+        <div class="social div4">
+
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+
+
+
+
+
+
+
+</header>
+
+<app-aside [(isOpen)]="visible"></app-aside>
+<!--
+<header class="main-header">
+
+
+<h1 class="title">CLUB BALONCESTO SANTOMERA</h1>
+
+<nav class="nav-links">
+  <ul class="navbar-nav flex-grow">
+    <li class="nav-item pe-5" [routerLinkActive]="['link-active']" [routerLinkActiveOptions]="{ exact: true }">
+      <a class="nav-link" [routerLink]="['/Inicio']">INICIO</a>
+    </li>
+    <li class="nav-item me-5" [routerLinkActive]="['link-active']">
+      <a class="nav-link text-light" [routerLink]="['/Club/Portada']">CLUB</a>
+    </li>
+    <li class="nav-item me-5" [routerLinkActive]="['link-active']">
+      <a class="nav-link text-light" [routerLink]="['/Equipo']">EQUIPO</a>
+    </li>
+    <li class="nav-item me-5" [routerLinkActive]="['link-active']">
+      <a class="nav-link text-light" [routerLink]="['/Tienda']">TIENDA</a>
+    </li>
+    <li class="nav-item me-5" [routerLinkActive]="['link-active']">
+      <a class="nav-link text-light" [routerLink]="['/Empresas']">EMPRESAS</a>
+    </li>
+    <li class="nav-item me-5" [routerLinkActive]="['link-active']">
+      <a class="nav-link text-light" [routerLink]="['/Unete']">ÚNETE</a>
+    </li>
+  </ul>
+</nav>
+</header>
+
+-->

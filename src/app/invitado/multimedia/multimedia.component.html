@@ -1,0 +1,72 @@
+<!--<p>multimedia works!</p>
+<app-album-view></app-album-view>-->
+<app-cabecera-titulo [titulo]="titulo"></app-cabecera-titulo>
+<p-toolbar styleClass="mb-0 gap-2 container">
+  <ng-template pTemplate="left">
+   
+
+  </ng-template>
+
+  <ng-template pTemplate="left">
+    <div class="flex-1 w-50">
+     
+      <p-dropdown  [options]="temporadas"
+                  appendTo="body"
+                  label="nombre"
+                  placeholder="selecciona una temporada"
+                  [(ngModel)]="temporadaSelected"
+                  [style]="{'width':'100%'}"
+                  optionLabel="nombre"
+                  (onChange)="cargarAlbumes()"
+                  [filter]="true" filterBy="nombre"  dataKey="id"
+                  />
+    </div>
+  </ng-template>
+</p-toolbar>
+
+
+
+<div class="container flex-wrap mb-7 mt-8">
+
+  <div class="cardo mt-1" *ngFor="let album of albumes; index as i; first as isFirst">
+
+    <div class="polaroid pt-3">
+
+      <a [routerLink]="['./', album.idAlbum]"> <img src="{{http+'temporada 24-25'+'/'+modelo+'/'+album.idAlbum+'/'+album.portada}}" class="img-fluid" alt="imagen10"></a>
+      <div class="texto text-bold block">
+        <div class="texto text-bold flex mb-5">
+          <h6 id="abril" class=" font-bold">{{album.nombre}}</h6>
+
+        </div>
+
+        <div class="texto mt3 font-bold font-italic flex ">
+
+          <div  class="flex-1 text-left  text-s">
+            {{album.temporada.nombre}}
+          </div>
+          <div class="flex-1 text-right  text-s ">
+
+            {{ album.fecha| date: 'dd/MM/yyyy' }}
+
+
+          </div>
+
+        </div>
+
+
+
+
+
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+
+</div>
+
+
+

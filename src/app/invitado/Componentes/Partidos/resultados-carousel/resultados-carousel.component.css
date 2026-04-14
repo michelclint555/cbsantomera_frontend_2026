@@ -1,0 +1,9 @@
+.contenedor{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%; /* Asegura que ocupe el alto del carrusel */
+  width: 100%;
+  padding: 10px; /* opcional */
+  box-sizing: border-box;
+}

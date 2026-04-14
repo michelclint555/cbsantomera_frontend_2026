@@ -1,0 +1,46 @@
+<app-cabecera-titulo [titulo]="titulo"></app-cabecera-titulo>
+
+<div class=" container mt-5">
+
+  <div *ngIf="patrocinadores.length != 0" class="nine mt-5 text-center">
+
+    <h3 class="mb-5">PATROCINADORES</h3>
+
+  </div>
+
+
+
+
+  <section class="seccion container">
+
+    <div class="sponsors">
+      <div *ngFor="let item of patrocinadores" class="sponsors p-3">
+        <a [routerLink]="['/Empresas',item.nombreUrl]">
+          <div class="sponsor-card">
+            <p-image src="{{item.logo}}" class="" alt="{{item.nombre}}" width="200"></p-image>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <div *ngIf="colaboradores.length != 0" class="nine mt-5 text-center">
+
+    <h3 class="mb-5">COLABORADORES</h3>
+
+  </div>
+  <section class="seccion container">
+
+    <div class="sponsors">
+      <div *ngFor="let item of colaboradores" class="sponsors p-3">
+        <a [routerLink]="['/',item.nombreUrl]">
+          <div class="sponsor-card">
+            <p-image src="{{item.logo}}" class="" alt="{{item.nombre}}" width="150"></p-image>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+</div>
