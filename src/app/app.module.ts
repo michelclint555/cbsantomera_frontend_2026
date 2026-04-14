@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import Lara from '@primeng/themes/Lara';
-import Aura from '@primeng/themes/aura';
+
+import Lara from '@primeuix/themes/lara';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PrimeNGModule } from './prime-ng/prime-ng.module';
@@ -41,7 +41,7 @@ import { ComponentesModule } from './invitado/shared/componentes/componentes.mod
     AppRoutingModule,
     PrimeNGModule,
     ButtonModule,
-   
+
     ToastModule,
     FormsModule,
     ReactiveFormsModule,
@@ -52,7 +52,7 @@ import { ComponentesModule } from './invitado/shared/componentes/componentes.mod
     SidebarModule,
     InvitadoModule
 
-    
+
   ],
   providers: [
     ContratoEmpresaService,
@@ -61,8 +61,8 @@ import { ComponentesModule } from './invitado/shared/componentes/componentes.mod
     provideAnimationsAsync(),
     providePrimeNG({
       theme: {
-        preset: Aura
-       
+        preset: Lara
+
       },
     }),
   ],
