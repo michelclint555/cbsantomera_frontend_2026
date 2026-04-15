@@ -1,5 +1,9 @@
 
 
+
+
+
+
 <div  *ngIf="noticias.length == 1" class="  carousel">
 
   <p-carousel [value]="noticias"
@@ -58,7 +62,7 @@
               [numVisible]="4"
               [numScroll]="1"
               [circular]="true"
-           
+
               [responsiveOptions]="responsiveOptions"  >
     <ng-template let-product pTemplate="item">
       <div class="carousel-item-wrapper">

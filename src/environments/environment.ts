@@ -4,10 +4,10 @@
 
 export const environment = {
   production: false,
- serve: "https://localhost:7102/api/",
-  serveFile: "https://localhost:7102/archivos/",
-  serveFileEquipos: "https://localhost:7102/archivos//MisEquipos/",
-  myVarForImageURLS: 'https://localhost:7102/assets/'
+ serve: "https://clubbaloncestosantomera-c8ggewe4dpe3h6cb.spaincentral-01.azurewebsites.net/api/",
+  serveFile: "https://clubbaloncestosantomera-c8ggewe4dpe3h6cb.spaincentral-01.azurewebsites.net/archivos/",
+  serveFileEquipos: "https://clubbaloncestosantomera-c8ggewe4dpe3h6cb.spaincentral-01.azurewebsites.net/archivos/MisEquipos/",
+  myVarForImageURLS: 'https://clubbaloncestosantomera-c8ggewe4dpe3h6cb.spaincentral-01.azurewebsites.net/assets/'
  /* serve: "http://cbsantomera2.tryasp.net/api/",
   serveFile: "http://cbsantomera2.tryasp.net/archivos/",
   serveFileEquipos: "http://cbsantomera2.tryasp.net/archivos//MisEquipos/",

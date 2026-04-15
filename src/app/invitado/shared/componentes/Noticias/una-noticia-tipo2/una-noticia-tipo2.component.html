@@ -3,11 +3,12 @@
   <div class="news-item">
     <img [src]="http+noticia.idNoticia+'/'+noticia.portada" class="w-100" alt="Noticia 2">
     <div class="news-content">
-      <span class="badge">Nuevo</span>
+      <span class="badge" *ngIf="noticia.nuevo">
+      Nuevo
+    </span>
       <h6>{{noticia.titulo}}</h6>
     </div>
   </div>
-
 
 
 

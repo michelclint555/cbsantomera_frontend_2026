@@ -1,51 +1,5 @@
-<!--<div class="plantilla">
-
-
-  <div class="box">
-
-
-    <div class="span" style="--i:1; ">
-
-      <div class="foto">
-        <img src="assets/jugadores/1.jpg" alt="imagen">
-      </div>
-
-
-
-      <div class="info">
-        <h3>Michael Gonzalez Alcaraz #3</h3>
-      </div>
-    </div>
-
-
-
-
-
-  </div>
-
-</div>
-  -->
-
-
-
-<style>
-  #app-loader {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: white;
-    z-index: 9999;
-  }
-</style>
-
-
-
-<app-cabecera-titulo [titulo]="equipo.nombre"></app-cabecera-titulo>
+<ng-container *ngIf="equipo">
+  <app-cabecera-titulo [titulo]="equipo.nombre"></app-cabecera-titulo>
 <div class="nine mb-0 mt-0 text-center">
 
 
@@ -62,7 +16,7 @@
 
 <div class="plantilla ">
 
-  
+
 
   <div class="box mb-0" >
     <div class="border-round span" *ngFor="let jugador of equipo.jugadores; index as t" style="--i: {{t}}; --p: {{(360/equipo.jugadores.length)+'deg'}}; ">
@@ -79,40 +33,7 @@
 
       <h1 class="">PLANTILLA</h1>
     </div>
-    <!--
-                  <ul class="auto-grid">
-            <li *ngFor="let jugador of equipo.jugadores; index as t">
-              <article class="card2">
-                <img class="card__background"
-                     src={{jugador.fotos[0].thumbnailImageSrc}}
-                     alt="Photo of Cartagena's cathedral at the background and some colonial style houses" />
 
-                <div class="card__content--container w-100 | flow card__title flex">
-
-                  <div class="flex-shrink-0 pl-4 flex align-items-left justify-content-left  font-bold border-round">  </div>
-                  <div class="flex-shrink-0 pl-3  flex align-items-left justify-content-left font-bold border-round">
-
-                    <h2 class="text-primary ml-4">{{jugador.dorsal+"   " }}</h2>
-                    <h2 class="">{{"         " + jugador.jugador.nombre }}</h2>
-
-
-                  </div>
-
-
-
-
-
-
-                </div>
-
-
-              </article>
-
-            </li>
-
-          </ul>
-
-    -->
 
 
     <ul class="auto-grid container">
@@ -157,175 +78,31 @@
   <p-tabPanel header="Clasificación">
     <app-clasificacion-corta></app-clasificacion-corta>
   </p-tabPanel>
-  
-</p-tabView>
 
-
-<!--
-  <div class=" flex flex-wrap  container   ">
-    <div *ngFor="let jugador of equipo.jugadores; index as t" class="m-auto gap-5 mt-5 flex align-items-center justify-content-center  font-bold border-round m-2">
-      <p-card class="justify-content-center text-center ">
-        <div class="div1 w-100   justify-content-center">
-
-          <img *ngIf="jugador.fotos.length != 0" src="{{jugador.fotos[0]. thumbnailImageSrc}}" class="img-fluid div1  justify-content-center " alt="imagen">
-          <img *ngIf="jugador.fotos.length != 0" src="{{URLFiles+'ImageLocked.png'}}" class="img-fluid   div2" alt="imagen">
-
-
-        </div>
-
-        <ng-template class="" pTemplate="footer">
-          <h6>{{jugador.jugador.nombre  }}<br /><h6>{{jugador.jugador.apellidos }}</h6></h6>
-
-        </ng-template>
-      </p-card>
-    </div>
-
-  </div>
-
-
-
-
-<p-tabView id="closableTabView">
-
-
-  <p-tabPanel header="Plantilla" [selected]="true">
-    <div class="nine mt-5 text-center">
-
-      <h1 class="">PLANTILLA</h1>
-    </div>
-
-    <ul class="auto-grid">
-      <li *ngFor="let jugador of equipo.jugadores; index as t">
-        <article class="card2">
-          <img class="card__background"
-               src="{{jugador.fotos[0]. thumbnailImageSrc}}"
-               alt="Photo of Cartagena's cathedral at the background and some colonial style houses" />
-
-          <div class="card__content--container w-100 | flow card__title flex">
-
-            <div class="flex-shrink-0 pl-4 flex align-items-left justify-content-left  font-bold border-round"> <h1 class="">{{jugador.dorsal }}</h1></div>
-            <div class="flex-auto pl-3  flex align-items-left justify-content-left font-bold border-round">  <h2 class="">{{jugador.jugador.nombre }}</h2></div>
-
-
-
-
-
-
-          </div>
-
-
-        </article>
-
-      </li>
-
-    </ul>
-
-
-
-
-
-
-    <div class="nine mt-5 text-center">
-
-      <h1 class="m-5">CUERPO TÉCNICO</h1>
-    </div>
-
-
-
-    <ul class="auto-grid">
-      <li *ngFor="let jugador of equipo.jugadores; index as t">
-        <article class="card2">
-          <img class="card__background"
-               src="assets/jugadores/18.jpg"
-               alt="Photo of Cartagena's cathedral at the background and some colonial style houses" />
-
-          <div class="card__content--container w-100 | flow card__title flex">
-
-
-
-            <div class="flex-auto pl-3  flex align-items-left justify-content-left font-bold border-round">  <h2 class="">Michael</h2></div>
-
-
-
-
-
-
-          </div>
-
-
-        </article>
-
-      </li>
-
-    </ul>
-
-
-
-
-    <div class="flex flex-wrap mb-5">
-      <div class="span m-auto ">
-
-        <div *ngFor="let jugador of equipo.jugadores; index as t" class="block  font-bold text-center  border-round ">
-          <img src="assets/jugadores/18.jpg" alt="imagen">
-        </div>
-        <div class="block font-bold info  w-100">
-          <h3>Michael #1</h3>
-        </div>
-
-
-      </div>
-
-      <div class="span m-auto ">
-
-        <div class="block  font-bold text-center  border-round ">
-          <img src="assets/jugadores/18.jpg" alt="imagen">
-        </div>
-        <div class="block font-bold info  w-100">
-          <h3>Michael #1</h3>
-        </div>
-
-
-      </div>
-
-      <div class="span m-auto ">
-
-        <div class="block  font-bold text-center  border-round ">
-          <img src="assets/jugadores/18.jpg" alt="imagen">
-        </div>
-        <div class="block font-bold info  w-100">
-          <h3>Michael #1</h3>
-        </div>
-
-
-      </div>
-    </div>
-
-  </p-tabPanel>
-  <p-tabPanel header="Clasificación">
-
-    <p-tabView [(activeIndex)]="activeIndex" [scrollable]="true">
-      <p-tabPanel *ngFor="let tab of scrollableTabs" [header]="tab.title">
-        <p>{{ tab.content }}</p>
-      </p-tabPanel>
-    </p-tabView>
-
-
-    <app-clasificacion-larga></app-clasificacion-larga>
-  </p-tabPanel>
-  <p-tabPanel header="Header III">
-    <p>
-      At vero eos et accusamus et iusto odio dignissimos...
-    </p>
-  </p-tabPanel>
 </p-tabView>
 
 
 
 
+</ng-container>
+
+
+
+<style>
+  #app-loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    z-index: 9999;
+  }
+</style>
 
 
 
 
-
-
-  -->
