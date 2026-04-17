@@ -59,13 +59,14 @@ const routes: Routes = [
       {
         path: 'Club', component: ClubComponent, children: [
 
-          { path: '', component: HistoriaComponent },
+
           { path: 'Contacto', component: ContactaComponent },
 
           { path: 'Historia', component: HistoriaComponent },
           { path: 'Portada', component: PortadaComponent },
           { path: 'Patrocinadores', component: PatrocinadoresComponent },
           { path: 'Valores', component: ValoresComponent },
+          { path: '', redirectTo: 'Portada', pathMatch: 'full' }
 
 
         ]
